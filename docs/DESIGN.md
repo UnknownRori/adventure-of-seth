@@ -87,8 +87,9 @@ Inventory Symbol :
 typedef struct tile {
     TileType m_type;
 
-    Item *m_item;
+    Item *m_items;
 
+    EntityType m_entity_type;
     union {
         Player *player;
         Mob *mob;
