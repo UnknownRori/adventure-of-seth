@@ -1,0 +1,36 @@
+/**
+ * @file config.h
+ * @author UnknownRori (68576836+UnknownRori@users.noreply.github.com)
+ * @brief A configuration file for adventure of @
+ * @version 0.1
+ * @date 2023-06-22
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
+
+#pragma once
+
+#ifndef UNKNOWNRORI_ADVENTURE_CONFIG_H
+#define UNKNOWNRORI_ADVENTURE_CONFIG_H
+
+#include <ncurses/ncurses.h>
+
+static const wchar_t GAME_TITLE[] = L"Adventure of Seth";
+
+// TODO : For future customizable keymap
+// const static Keymap KEY_MAP[] = {
+//     {'q', void},       // Quit
+//     {'i', void},       // Open Inventory
+//     {'d', void},       // Drop selected item
+//     {'g', void},       // Pickup item
+//     {'o', void},       // Open door
+//     {'a', void},       // Activate item (Attack?)
+//     {KEY_ENTER, void}, // Select item on inventory
+//     {KEY_UP, void},    // Move up    || Move selection of inventory
+//     {KEY_DOWN, void},  // Move down  || Move selection of inventory
+//     {KEY_LEFT, void},  // Move left
+//     {KEY_RIGHT, void}, // Move right
+// };
+
+#endif // UNKNOWNRORI_ADVENTURE_CONFIG_H

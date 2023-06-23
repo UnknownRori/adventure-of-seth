@@ -1,0 +1,9 @@
+/src/config.h
+/dist/
+/temp/
+*.exe
+
+*.i
+*.bc
+*.o
+*.s
