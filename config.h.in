@@ -17,6 +17,7 @@
 #include <ncurses/ncurses.h>
 
 static const wchar_t GAME_TITLE[] = L"Adventure of Seth";
+static const char GAME_VERSION[] = "0.1";
 
 // TODO : For future customizable keymap
 // const static Keymap KEY_MAP[] = {
