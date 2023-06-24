@@ -1,6 +1,6 @@
 CC = gcc
-FLAGS = -Wall -Werror -Wconversion -Wundef -Wshadow -Wdouble-promotion -fno-common -Wformat=2 -std=c17
-DEBUG = -g -DDEBUG -DCOLORED -fstack-usage -fno-omit-frame-pointer -ggdb
+FLAGS = -Wall -Werror -Wconversion -Wundef -Wshadow -Wdouble-promotion -Wformat-signedness -fno-common -Wformat=2 -std=c17
+DEBUG = -g -DDEBUG -DCOLORED -fstack-usage -fbounds-check -fno-omit-frame-pointer -ggdb
 
 LIBS_FLAGS = -DNCURSES_STATIC -lncurses -static
 
@@ -10,7 +10,7 @@ DIST = dist
 MAIN_SRC = adventure.c
 MAIN_ELF = ./$(TEMP)/adventure
 
-GAME_SRC = 
+GAME_SRC = ./src/adventure_game.c ./src/tui.c
 
 all: build
 	# $(MAIN_ELF)

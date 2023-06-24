@@ -39,7 +39,35 @@ extern "C"
      * @param __title
      * @param __repeat
      */
-    void tui_draw_title(WINDOW *__win, const wchar_t *__title, const wchar_t __repeat);
+    void tui_draw_title(WINDOW *__win, const wchar_t *__title);
+
+    /**
+     * @brief Draw a title on first line at center of the window and repeat something
+     *
+     * @param __win
+     * @param __title
+     * @param __repeat
+     */
+    void tui_draw_title_repeat(WINDOW *__win, const wchar_t *__title, const wchar_t repeat);
+
+    /**
+     * @brief Draw a text on specific coordinate with attribute
+     *
+     * @param __win
+     * @param __title
+     * @param __coordinate
+     * @param __attribute
+     */
+    void tui_draw_text(WINDOW *__win, const wchar_t *__title, Vec2 __coordinate, i32 __atr);
+
+    /**
+     * @brief Get the window size object
+     *
+     * @param __win
+     * @param y
+     * @param x
+     */
+    void tui_get_window_size(WINDOW *__win, i32 *y, i32 *x);
 
     /**
      * @brief Create window with box around it
@@ -52,14 +80,14 @@ extern "C"
 
     /**
      * @brief Destroy window
-     * 
-     * @param __win 
+     *
+     * @param __win
      */
     void tui_end_window(WINDOW *__win);
 
     /**
      * @brief End TUI
-     * 
+     *
      */
     void tui_deinit();
 
