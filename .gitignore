@@ -1,6 +1,8 @@
 /src/config.h
 /dist/
 /temp/
+/.vscode/
+
 *.exe
 
 *.i
