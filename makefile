@@ -10,7 +10,7 @@ DIST = dist
 MAIN_SRC = adventure.c
 MAIN_ELF = ./$(TEMP)/adventure
 
-GAME_SRC = ./src/adventure_game.c ./src/tui.c
+GAME_SRC = ./src/adventure_game.c ./src/tui.c ./src/map.c
 
 all: build
 	# $(MAIN_ELF)
@@ -21,7 +21,7 @@ build: setup
 setup:
 	([ ! -e ./$(DIST) ] && mkdir $(DIST)) || [ -e ./$(DIST) ]
 	([ ! -e ./$(TEMP) ] && mkdir $(TEMP)) || [ -e ./$(TEMP) ]
-	([ ! -e ./src/config.h ] && cp ./config.h.in ./src/config.h) || [ -e ./$(TEMP) ]
+	([ ! -e ./src/config.h ] && cp ./config.h.in ./src/config.h) || [ -e ./src/config.h ]
 
 clean: setup
 	rm -r ./$(TEMP) & rm -r ./$(DIST)

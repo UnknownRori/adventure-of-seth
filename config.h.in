@@ -16,8 +16,21 @@
 
 #include <ncurses/ncurses.h>
 
+#include "./map.h"
+#include "./vec2.h"
+#include "./utility.h"
+
 static const wchar_t GAME_TITLE[] = L"Adventure of Seth";
-static const char GAME_VERSION[] = "0.1";
+static const wchar_t GAME_VERSION[] = L"0.1";
+
+const static Vec2 DEFAULT_MAP_SIZE = {.x = 20, .y = 10};
+const static TileMetaData TILE_META[] = {
+    {.m_name = L"Floor", .m_symbol = L'.'},
+    {.m_name = L"Wall", .m_symbol = L'#'},
+    {.m_name = L"OpenDoor", .m_symbol = L'O'},
+    {.m_name = L"ClosedDoor", .m_symbol = L'X'},
+};
+const static usize TILE_META_LEN = ARRAY_LEN(TILE_META);
 
 // TODO : For future customizable keymap
 // const static Keymap KEY_MAP[] = {
