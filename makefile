@@ -10,7 +10,7 @@ DIST = dist
 MAIN_SRC = adventure.c
 MAIN_ELF = ./$(TEMP)/adventure
 
-GAME_SRC = ./src/adventure_game.c ./src/tui.c ./src/map.c
+GAME_SRC = ./src/adventure_game.c ./src/tui.c ./src/map.c ./src/ui.c
 
 all: build
 	# $(MAIN_ELF)

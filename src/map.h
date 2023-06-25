@@ -56,7 +56,6 @@ extern "C"
 #endif // __cplusplus
 
     void map_init(Map *__map, i32 __x, i32 __y);
-    void map_draw(WINDOW *__win, Map *__map, i32 __x, i32 __y);
     void map_deinit(Map *__map);
 
 #if defined(__cplusplus)

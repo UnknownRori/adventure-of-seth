@@ -7,6 +7,7 @@
 #include "./config.h"
 #include "./adventure_game_intern.h"
 #include "./tui.h"
+#include "./ui.h"
 
 GameGlobal *GAME_GLOBAL = nullptr;
 
