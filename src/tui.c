@@ -41,6 +41,7 @@ void tui_init()
     keypad(stdscr, true);
 
     tui_get_window_size(stdscr, &TERM_HEIGHT, &TERM_WIDTH);
+    clear();
 
 #if defined(DEBUG)
     mvprintw(TERM_HEIGHT - 2, 1, "(?) TERM SIZE : %d : %d", TERM_WIDTH, TERM_HEIGHT);
