@@ -117,12 +117,9 @@ void tui_get_window_size(WINDOW *__win, i32 *y, i32 *x)
  * @param __coordinate
  * @return WINDOW*
  */
-WINDOW *tui_create_window(Vec2 __size, Vec2 __coordinate)
+WINDOW *tui_create_window(i32 __height, i32 __width, i32 __y, i32 __x)
 {
-    WINDOW *temp = newwin(__size.y, __size.x, __coordinate.y, __coordinate.x);
-
-    box(temp, 0, 0);
-    wrefresh(temp);
+    WINDOW *temp = newwin(__height, __width, __y, __x);
 
     return temp;
 }

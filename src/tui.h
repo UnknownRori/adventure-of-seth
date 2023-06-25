@@ -76,7 +76,7 @@ extern "C"
      * @param __coordinate
      * @return WINDOW*
      */
-    WINDOW *tui_create_window(Vec2 __size, Vec2 __coordinate);
+    WINDOW *tui_create_window(i32 __height, i32 __width, i32 __y, i32 __x);
 
     /**
      * @brief Destroy window

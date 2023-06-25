@@ -21,4 +21,6 @@ void map_draw(WINDOW *__win, Map *__map, i32 __x, i32 __y)
         const i32 new_y_pos = __y + yindex + 1;
         wmove(__win, new_y_pos, __x);
     }
+
+    wrefresh(__win);
 }
