@@ -15,7 +15,7 @@
 #define UNKNOWNRORI_ADVENTURE_GAME_UI_H
 
 #include "./tui.h"
-#include "./map.h"
+#include "../game/map.h"
 
 #if defined(__cplusplus)
 extern "C"

@@ -16,8 +16,8 @@
 
 #include <ncurses/ncurses.h>
 
-#include "./types.h"
-#include "./vec2.h"
+#include "../types.h"
+#include "../types/vec2.h"
 
 #define MAIN_WINDOW stdscr
 

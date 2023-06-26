@@ -3,8 +3,8 @@
 #include <ncurses/ncurses.h>
 
 #include "./tui.h"
-#include "./types.h"
-#include "./vec2.h"
+#include "../types.h"
+#include "../types/vec2.h"
 
 // TODO : for future optimization, maybe?
 typedef struct tui_window

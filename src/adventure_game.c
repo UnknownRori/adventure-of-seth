@@ -7,8 +7,8 @@
 
 #include "./config.h"
 #include "./adventure_game_intern.h"
-#include "./tui.h"
-#include "./ui.h"
+#include "./ui/tui.h"
+#include "./ui/ui.h"
 
 GameGlobal *GAME_GLOBAL = nullptr;
 WINDOW *MAP_WINDOW = nullptr;

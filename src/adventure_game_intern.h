@@ -14,7 +14,7 @@
 #ifndef UNKNOWNRORI_ADVENTURE_GAME_INTERN_H
 #define UNKNOWNRORI_ADVENTURE_GAME_INTERN_H
 
-#include "./map.h"
+#include "./game/map.h"
 
 typedef struct game_global
 {

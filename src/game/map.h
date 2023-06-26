@@ -14,9 +14,9 @@
 #ifndef UNKNOWNRORI_ADVENTURE_GAME_MAP_H
 #define UNKNOWNRORI_ADVENTURE_GAME_MAP_H
 
-#include "./tui.h"
-#include "./types.h"
-#include "./vec2.h"
+#include "../ui/tui.h"
+#include "../types.h"
+#include "../types/vec2.h"
 
 typedef struct tile_metadata
 {

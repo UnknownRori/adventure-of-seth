@@ -14,7 +14,7 @@
 #ifndef UNKNOWNRORI_ADVENTURE_GAME_VEC2_H
 #define UNKNOWNRORI_ADVENTURE_GAME_VEC2_H
 
-#include "./types.h"
+#include "../types.h"
 
 typedef struct vec_2
 {
