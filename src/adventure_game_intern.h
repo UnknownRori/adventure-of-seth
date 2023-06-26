@@ -15,10 +15,12 @@
 #define UNKNOWNRORI_ADVENTURE_GAME_INTERN_H
 
 #include "./game/map.h"
+#include "./game/player.h"
 
 typedef struct game_global
 {
     Map m_map;
+    Player *player;
 } GameGlobal;
 
 extern GameGlobal *GAME_GLOBAL;

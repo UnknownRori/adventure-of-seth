@@ -17,6 +17,7 @@
 #include "../ui/tui.h"
 #include "../types.h"
 #include "../types/vec2.h"
+#include "./entity.h"
 
 typedef struct tile_metadata
 {
@@ -33,11 +34,11 @@ typedef struct tile
     // u32 m_entity_type
 
     // Item *m_item;
-    // union
-    // {
-    //     Player *player;
-    //     Mob *mob;
-    // } m_entity;
+    union
+    {
+        Player *player;
+        // Mob *mob;
+    } m_entity;
 
 } Tile;
 
@@ -57,6 +58,7 @@ extern "C"
 
     void map_init(Map *__map, i32 __x, i32 __y);
     void map_deinit(Map *__map);
+    void map_put_entity(Map *__map, Entity *__entity, i32 __x, i32 __y);
 
 #if defined(__cplusplus)
 }

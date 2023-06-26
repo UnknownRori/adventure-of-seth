@@ -13,7 +13,8 @@ MAIN_ELF = ./$(TEMP)/adventure
 GAME_SRC = ./src/adventure_game.c \
            ./src/ui/tui.c \
            ./src/game/map.c \
-           ./src/ui/ui.c
+           ./src/ui/ui.c \
+           ./src/game/player.c \
 
 all: build
 	# $(MAIN_ELF)
