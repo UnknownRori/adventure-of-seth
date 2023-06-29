@@ -23,19 +23,20 @@ void init_game()
     tui_init();
 
     game_init();
-}
 
-void game_loop()
-{
     box(MAIN_WINDOW, 0, 0);
     tui_draw_title(MAIN_WINDOW, GAME_TITLE);
 
     box(MAP_WINDOW, 0, 0);
     tui_draw_title(MAP_WINDOW, L"MAP");
     map_draw(MAP_WINDOW, &(GAME_GLOBAL->m_map), 1, 1);
+}
 
+void game_loop()
+{
     while (true)
     {
+        // TODO : Implement something here
     }
 }
 
