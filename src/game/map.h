@@ -30,16 +30,9 @@ typedef struct tile
     // ? INFO : Customized by config.h.in
     u32 m_type;
 
-    // ? INFO : Customized by config.h.in
-    // u32 m_entity_type
-
     // Item *m_item;
-    union
-    {
-        Player *player;
-        // Mob *mob;
-    } m_entity;
 
+    Entity *m_entity;
 } Tile;
 
 typedef struct map

@@ -30,13 +30,16 @@ void init_game()
     box(MAP_WINDOW, 0, 0);
     tui_draw_title(MAP_WINDOW, L"MAP");
     map_draw(MAP_WINDOW, &(GAME_GLOBAL->m_map), 1, 1);
+
+    GAME_GLOBAL->player = player_init(100, 2, 2);
+    map_put_entity(&(GAME_GLOBAL->m_map), GAME_GLOBAL->player, 2, 2);
 }
 
 void game_loop()
 {
     while (true)
     {
-        // TODO : Implement something here
+        map_draw(MAP_WINDOW, &(GAME_GLOBAL->m_map), 1, 1);
     }
 }
 

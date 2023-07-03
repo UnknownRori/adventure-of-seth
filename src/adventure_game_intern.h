@@ -20,7 +20,7 @@
 typedef struct game_global
 {
     Map m_map;
-    Player *player;
+    EntityPlayer *player;
 } GameGlobal;
 
 extern GameGlobal *GAME_GLOBAL;

@@ -40,4 +40,7 @@ void generate_default_tile(Tile *__tiles, i32 __width, i32 __height)
 }
 
 // TODO : Implement this
-void map_put_entity(Map *__map, Entity *__entity, i32 __x, i32 __y);
+void map_put_entity(Map *__map, Entity *__entity, i32 __x, i32 __y)
+{
+    TILE_AT(__map->m_tiles, __x, __y, __map->m_size.x).m_entity = __entity;
+}

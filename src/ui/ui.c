@@ -15,7 +15,11 @@ void map_draw(WINDOW *__win, Map *__map, i32 __x, i32 __y)
         for (i32 xindex = 0; xindex < __width; xindex++)
         {
             Tile temp = TILE_AT(__map->m_tiles, xindex, yindex, __map->m_size.x);
-            wprintw(__win, "%lc", TILE_META[temp.m_type].m_symbol);
+
+            if (temp.m_entity == nullptr)
+                wprintw(__win, "%lc", TILE_META[temp.m_type].m_symbol);
+            else
+                wprintw(__win, "%lc", ENTITY_META[temp.m_entity->m_type].m_symbol);
         }
 
         const i32 new_y_pos = __y + yindex + 1;
