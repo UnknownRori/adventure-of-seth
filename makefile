@@ -15,6 +15,8 @@ GAME_SRC = ./src/adventure_game.c \
            ./src/game/map.c \
            ./src/ui/ui.c \
            ./src/game/player.c \
+           ./src/game/keymap/action.c \
+           ./src/game/keymap/keymap.c \
 
 all: build
 	# $(MAIN_ELF)

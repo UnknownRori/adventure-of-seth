@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 #include <assert.h>
 #include <time.h>
 
@@ -7,14 +8,19 @@
 
 #include "./config.h"
 #include "./adventure_game_intern.h"
+
 #include "./ui/tui.h"
 #include "./ui/ui.h"
 
+#include "./game/keymap/keymap.h"
+
 GameGlobal *GAME_GLOBAL = nullptr;
 WINDOW *MAP_WINDOW = nullptr;
+Keymap CURRENT_KEY = {0};
 
-void game_init();
-void game_deinit();
+static inline void game_init();
+static inline void game_deinit();
+static inline void get_exec_user_input();
 
 void init_game()
 {
@@ -37,9 +43,13 @@ void init_game()
 
 void game_loop()
 {
+    Keymap current_key;
+    memset(&current_key, 0, sizeof(Keymap));
+
     while (true)
     {
         map_draw(MAP_WINDOW, &(GAME_GLOBAL->m_map), 1, 1);
+        get_exec_user_input();
     }
 }
 
@@ -49,7 +59,7 @@ void clean_up_game()
     tui_deinit();
 }
 
-void game_init()
+static inline void game_init()
 {
     GAME_GLOBAL = calloc(0, sizeof(GameGlobal));
     map_init(&(GAME_GLOBAL->m_map), DEFAULT_MAP_SIZE.x, DEFAULT_MAP_SIZE.y);
@@ -59,8 +69,17 @@ void game_init()
     assert(MAP_WINDOW != nullptr);
 }
 
-void game_deinit()
+static inline void game_deinit()
 {
     map_deinit(&(GAME_GLOBAL->m_map));
     free(GAME_GLOBAL);
+}
+
+static inline void get_exec_user_input()
+{
+    int in = getch();
+    if (get_key(in, &CURRENT_KEY))
+    {
+        exec_key_action(&CURRENT_KEY);
+    }
 }
