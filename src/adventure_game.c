@@ -43,9 +43,6 @@ void init_game()
 
 void game_loop()
 {
-    Keymap current_key;
-    memset(&current_key, 0, sizeof(Keymap));
-
     while (true)
     {
         map_draw(MAP_WINDOW, &(GAME_GLOBAL->m_map), 1, 1);
