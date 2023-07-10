@@ -51,6 +51,7 @@ extern "C"
 
     void map_init(Map *__map, i32 __x, i32 __y);
     void map_deinit(Map *__map);
+    void map_clear_all_entity(Map *__map);
     void map_put_entity(Map *__map, Entity *__entity, i32 __x, i32 __y);
 
 #if defined(__cplusplus)

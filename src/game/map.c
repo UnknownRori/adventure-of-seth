@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <string.h>
 
 #include "./map.h"
 
@@ -35,6 +36,17 @@ void generate_default_tile(Tile *__tiles, i32 __width, i32 __height)
             {
                 TILE_AT(__tiles, x, y, __width).m_type = 0;
             }
+        }
+    }
+}
+
+void map_clear_all_entity(Map *__map)
+{
+    for (i32 y = 0; y < __map->m_size.y; y++)
+    {
+        for (i32 x = 0; x < __map->m_size.x; x++)
+        {
+            TILE_AT(__map->m_tiles, x, y, __map->m_size.x).m_entity = nullptr;
         }
     }
 }
