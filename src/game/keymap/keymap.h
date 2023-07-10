@@ -18,6 +18,8 @@
 
 #include "../../types.h"
 
+#define KEYMAP_ZEROED(__VAR) (memset(__VAR, 0, sizeof(Keymap)));
+
 typedef struct keymap
 {
     i32 m_char_code;

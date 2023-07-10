@@ -64,6 +64,8 @@ static inline void game_init()
     MAP_WINDOW = tui_create_window(DEFAULT_MAP_SIZE.y + 2, DEFAULT_MAP_SIZE.x + 2, 4, 4);
 
     assert(MAP_WINDOW != nullptr);
+
+    KEYMAP_ZEROED(&CURRENT_KEY);
 }
 
 static inline void game_deinit()
