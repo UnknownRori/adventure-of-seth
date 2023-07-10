@@ -13,7 +13,7 @@ void action_exit_game()
 }
 void action_move_up()
 {
-    if (GAME_GLOBAL->player->m_ptr.player->m_pos.y = 1)
+    if (GAME_GLOBAL->player->m_ptr.player->m_pos.y > 1)
         GAME_GLOBAL->player->m_ptr.player->m_pos.y -= 1;
 }
 
