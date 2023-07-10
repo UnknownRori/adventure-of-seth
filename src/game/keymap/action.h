@@ -20,6 +20,10 @@ extern "C"
 #endif // __cplusplus
 
     void action_exit_game();
+    void action_move_up();
+    void action_move_down();
+    void action_move_left();
+    void action_move_right();
 
 #if defined(__cplusplus)
 }
