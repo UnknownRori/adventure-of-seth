@@ -58,7 +58,7 @@ void clean_up_game()
 
 static inline void game_init()
 {
-    GAME_GLOBAL = calloc(0, sizeof(GameGlobal));
+    GAME_GLOBAL = calloc(1, sizeof(GameGlobal));
     map_init(&(GAME_GLOBAL->m_map), DEFAULT_MAP_SIZE.x, DEFAULT_MAP_SIZE.y);
 
     MAP_WINDOW = tui_create_window(DEFAULT_MAP_SIZE.y + 2, DEFAULT_MAP_SIZE.x + 2, 4, 4);
