@@ -32,6 +32,8 @@ typedef struct tile
 
     // Item *m_item;
 
+    // Not Dynamically allocated it was a referenced
+    // TODO : Maybe put this as ReferenceCounter struct for safety
     Entity *m_entity;
 } Tile;
 
